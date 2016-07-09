@@ -3,16 +3,13 @@ import 'babel-polyfill';
 
 import { readAll, create } from './dynamo';
 
-export default event => {
+export default (event, context, callback) => {
     if (event.operation === 'read') {
-        console.log(readAll());
-        return readAll();
+        callback(null, readAll());
     }
 
     if (event.operation === 'create') {
-        const created = create(event.data);
-        console.log(created);
-        return created;
+        callback(null, create(event.data));
     }
 
     return [];
