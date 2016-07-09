@@ -1,2 +1,4 @@
 node_modules
 functions/*/lib
+/context.json
+/event.json
