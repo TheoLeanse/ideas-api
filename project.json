@@ -1,0 +1,8 @@
+{
+    "name": "ideas-api",
+    "description": "",
+    "profile": "ideas-api",
+    "role": "",
+    "runtime": "nodejs",
+    "handler": "lib.default"
+}
