@@ -1,5 +1,9 @@
 import ideas from './initialIdeasState';
 
-export function getIdeas () {
+export function readAll () {
     return ideas;
+}
+
+export function create () {
+    return [];
 }
