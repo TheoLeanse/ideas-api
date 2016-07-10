@@ -1,8 +1,6 @@
 import AWS from 'aws-sdk';
-const dynamoConfig = {
-    region:          'eu-west-1'
-};
-const docClient = new AWS.DynamoDB.DocumentClient(dynamoConfig);
+
+const docClient = new AWS.DynamoDB.DocumentClient({ region: 'eu-west-1' });
 const projectName = 'ideas-api';
 const stage = 'prod';
 const ideasTable = projectName + '-ideas-' + stage;
