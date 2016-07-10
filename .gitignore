@@ -2,3 +2,4 @@ node_modules
 functions/*/lib
 /context.json
 /event.json
+/.DS_Store

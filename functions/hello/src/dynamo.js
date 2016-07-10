@@ -1,7 +1,6 @@
 import AWS from 'aws-sdk';
 const dynamoConfig = {
-    sessionToken:    process.env.THEO_AWS_SESSION_TOKEN,
-    region:          process.env.THEO_AWS_REGION
+    region:          'eu-west-1'
 };
 const docClient = new AWS.DynamoDB.DocumentClient(dynamoConfig);
 const projectName = 'ideas-api';

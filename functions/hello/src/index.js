@@ -1,15 +1,15 @@
 import λ from 'apex.js';
 import 'babel-polyfill';
 
-import { readAll, create } from './dynamo';
+import { getIdeas, createIdea } from './dynamo';
 
 export default λ(event => {
     if (event.operation === 'read') {
-        return readAll();
+        return getIdeas();
     }
 
     if (event.operation === 'create') {
-        return create(event.data);
+        return createIdea(event.data);
     }
 
     return [];
