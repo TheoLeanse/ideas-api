@@ -27,16 +27,16 @@ export function getIdeas () {
     });
 }
 
-export function createIdea(post) {
+export function createIdea(idea) {
     return new Promise((resolve, reject) => {
         const params = {
             TableName: ideasTable,
-            Item: post
+            Item: idea
         };
 
         docClient.put(params, (err, data) => {
             if (err) return reject(err);
-            return resolve(post);
+            return resolve(idea);
         });
 
     });
